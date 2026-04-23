@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Accessible Portfolio</title>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f5f5f5;
+color:#222;
+line-height:1.6;
+}
+
+.skip-link{
+position:absolute;
+left:-999px;
+top:0;
+background:black;
+color:white;
+padding:8px;
+}
+
+.skip-link:focus{
+left:10px;
+top:10px;
+z-index:1000;
+}
+
+nav{
+background:#333;
+color:white;
+padding:12px;
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.logo{
+height:60px;
+}
+
+.access-tip{
+font-size:14px;
+opacity:0.9;
+}
+
+.site-name{
+font-size:20px;
+font-weight:bold;
+color:white;
+}
+
+.nav-link{
+color:white;
+text-decoration:none;
+font-size:15px;
+padding:6px 10px;
+border:1px solid white;
+border-radius:4px;
+}
+
+.nav-link:hover{
+background:rgba(255,255,255,0.15);
+}
+
+.nav-link.active{
+background:white;
+color:#333;
+}
+
+.darkmode-btn{
+margin-left:auto;
+background:white;
+border:none;
+padding:6px 10px;
+cursor:pointer;
+border-radius:4px;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+.grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:30px;
+margin-top:30px;
+}
+
+.section-box{
+background:white;
+padding:20px;
+border-radius:6px;
+box-shadow:0 1px 5px rgba(0,0,0,.1);
+margin-bottom:20px;
+}
+
+.content-img{
+width:100%;
+border-radius:4px;
+margin-bottom:10px;
+}
+
+form input, form textarea{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border:1px solid #ccc;
+box-sizing:border-box;
+}
+
+form button{
+background:#333;
+color:white;
+border:none;
+padding:10px;
+cursor:pointer;
+}
+
+.audio-box{
+background:#eef5ff;
+padding:15px;
+border-radius:5px;
+margin-top:10px;
+color:#222;
+}
+
+.audio-box h3{
+color:#222;
+margin-top:0;
+}
+
+.caption-btn{
+margin-top:10px;
+background:#333;
+color:white;
+border:none;
+padding:8px 12px;
+cursor:pointer;
+border-radius:4px;
+}
+
+footer{
+background:#333;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+
+.dark-mode{
+background:#121212;
+color:white;
+}
+
+.dark-mode nav{
+background:black;
+}
+
+.dark-mode .section-box{
+background:#1e1e1e;
+}
+
+.dark-mode input,
+.dark-mode textarea{
+background:#2a2a2a;
+color:white;
+border:1px solid #555;
+}
+
+.dark-mode .darkmode-btn{
+background:#444;
+color:white;
+}
+
+.dark-mode .audio-box{
+background:#ddeeff;
+color:#222;
+}
+
+.dark-mode .audio-box h3{
+color:#222;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="#main" class="skip-link">Skip to Main Content</a>
+
+<nav class="container">
+
+<img src="Cardinal-photo.png" alt="Red cardinal logo" title="Red cardinal logo representing the site branding" class="logo">
+
+<span class="site-name">Christopher Andrew Kostick</span>
+
+<a href="index.html" class="nav-link active">Home</a>
+
+<a href="accessibility.html" class="nav-link">Accessibility Page</a>
+
+<div class="access-tip">
+Dark Mode = Alt + A
+</div>
+
+<button class="darkmode-btn" onclick="toggleDarkMode()">
+Toggle Dark Mode
+</button>
+
+</nav>
+
+<div id="main" class="container">
+
+<section class="section-box">
+
+<h1>About Me</h1>
+
+<p>
+Hello Everyone!
+<br><br>
+My name is Christopher Andrew Kostick and I am a current Senior here at Rutgers University
+<br><br>
+Major: Information Technology / Minor: Critical Intelligence Studies
+<br><br>
+Hobbies: I like to go hiking, play video games, and play sports (Futbol, Basketball)
+<br><br>
+The reason I have the logo as a Red Cardinal is because whenever someone in my family passes we have it to where they visit us through a Red Cardinal symbolizing we are not alone in this world, we will always have each other.
+</p>
+
+</section>
+
+<div class="grid">
+
+<div>
+
+<section class="section-box">
+
+<h2>My IT History</h2>
+
+<img src="ricoh.png" alt="Technology related image" title="Ricoh workplace where I had my internship during the summer of 2025" class="content-img">
+
+<img src="conduent.png" alt="Technology related image" title="Conduent company where I continued developing IT and professional experience with a start date of March 25th 2026" class="content-img">
+
+<p>
+I became interested in Information Technology through Professor Messor and his videos on YouTube along with my Cousin who does IT work with Google and has been for multiple years. Seeing him be successful and actually introduce me to the line of work, had made me interested in what career I could build for myself.
+</p>
+
+</section>
+
+<section class="section-box">
+
+<h2>My School</h2>
+
+<img src="rutgers-school.png" alt="My university campus" title="Rutgers University (Specifically the College Avenue Campus) where I study Information Technology" class="content-img">
+
+<p>
+I am in my last semester here at Rutgers with a current GPA of 3.75 Majoring in Information Technology along with a Minor in Critical Intelligence Studies. I am a 3 year attendee of the RUSecurity club where we have weekly meetings and discuss the latest Cyber news and complete labs to which can help boost our skills and apply them to our resume and our careers.
+</p>
+
+</section>
+
+<section class="section-box">
+
+<h2>Where I Grew Up</h2>
+
+<img src="Tottenville.png" alt="My hometown" title="Tottenville, Staten Island where I grew up" class="content-img">
+
+<p>
+Before moving to New Jersey I had lived in a place called Staten Island, Tottenville to be specific. It is said to be the "little brother" or the "forgotten borough" but I dont think of it that way. I think of it as the place my life really started, especially my high school. Made most of my long term friendships there, met some amazing teachers, and still kept connections there because now my cousins who stayed behind are just starting high school this year.
+</p>
+
+</section>
+
+</div>
+
+<div>
+
+<section class="section-box">
+
+<h2>Contact Me</h2>
+
+<form onsubmit="sendEmail(); return false;">
+
+<label for="name">Name</label>
+<input type="text" id="name" placeholder="Your name">
+
+<label for="email">Email</label>
+<input type="email" id="email" placeholder="your@email.com">
+
+<label for="message">Message</label>
+<textarea id="message" rows="4" placeholder="Your message..."></textarea>
+
+<button type="submit">Send</button>
+
+</form>
+
+</section>
+
+<section class="section-box">
+
+<h2>Why Captions Matter</h2>
+
+<p>
+These audio examples demonstrate how hearing loss can affect speech clarity.
+Captions and transcripts help make multimedia accessible to everyone.
+</p>
+
+<div class="audio-box">
+
+<h3>Normal Hearing Example</h3>
+
+<audio controls aria-label="Audio example demonstrating normal hearing">
+<source src="ttsMP3.com_VoiceText_2026-3-11_17-6-55.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<div class="audio-box">
+
+<h3>Muffled Hearing Example</h3>
+
+<audio controls aria-label="Audio example demonstrating muffled hearing">
+<source src="audiomass-output.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<h3>Caption Transcript</h3>
+
+<p id="captionText">
+Normal Hearing: This audio demonstrates how speech normally sounds when hearing is clear and unobstructed.
+
+<br><br>
+
+Muffled Hearing: This audio simulates how speech may sound to someone with hearing loss where clarity and frequencies are reduced, making speech harder to understand without captions.
+</p>
+
+<button class="caption-btn" onclick="readCaptions()">
+🔊 Listen to Captions
+</button>
+
+</section>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+Accessibility Demonstration Website
+
+</footer>
+
+<script>
+
+function toggleDarkMode(){
+document.body.classList.toggle("dark-mode");
+}
+
+document.addEventListener("keydown", function(event){
+if(event.altKey && event.key.toLowerCase() === "a"){
+toggleDarkMode();
+}
+});
+
+function readCaptions(){
+const text = document.getElementById("captionText").innerText;
+const speech = new SpeechSynthesisUtterance(text);
+speech.rate = 1;
+speech.pitch = 1;
+speechSynthesis.speak(speech);
+}
+
+function sendEmail(){
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+let message = document.getElementById("message").value.trim();
+
+if(!name || !email || !message){
+alert("Please fill in all fields before sending.");
+return;
+}
+
+let subject = encodeURIComponent("Portfolio Contact Form");
+
+let body = encodeURIComponent(
+"Name: " + name + "\r\n" +
+"Email: " + email + "\r\n\r\n" +
+message
+);
+
+window.location.href =
+"mailto:ck822@scarletmail.rutgers.edu?subject=" + subject + "&body=" + body;
+}
+
+</script>
+
+</body>
+
+</html>

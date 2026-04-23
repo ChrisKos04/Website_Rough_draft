@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Accessibility Position | Christopher Andrew Kostick</title>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f5f5f5;
+color:#222;
+line-height:1.8;
+}
+
+/* Skip link */
+
+.skip-link{
+position:absolute;
+left:-999px;
+top:0;
+background:black;
+color:white;
+padding:8px;
+}
+
+.skip-link:focus{
+left:10px;
+top:10px;
+z-index:1000;
+}
+
+/* Navigation */
+
+nav{
+background:#333;
+color:white;
+padding:12px;
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+.logo{
+height:60px;
+}
+
+.site-name{
+font-size:20px;
+font-weight:bold;
+color:white;
+}
+
+.nav-link{
+color:white;
+text-decoration:none;
+font-size:15px;
+padding:6px 10px;
+border:1px solid white;
+border-radius:4px;
+}
+
+.nav-link:hover{
+background:rgba(255,255,255,0.15);
+}
+
+.nav-link.active{
+background:white;
+color:#333;
+}
+
+.access-tip{
+font-size:14px;
+opacity:0.9;
+}
+
+.darkmode-btn{
+margin-left:auto;
+background:white;
+border:none;
+padding:6px 10px;
+cursor:pointer;
+border-radius:4px;
+}
+
+/* Layout */
+
+.container{
+width:90%;
+max-width:900px;
+margin:auto;
+}
+
+/* Hero banner */
+
+.hero{
+background:#333;
+color:white;
+padding:50px 0 40px;
+text-align:center;
+}
+
+.hero h1{
+font-size:28px;
+margin:0 0 10px;
+line-height:1.4;
+}
+
+.hero p{
+font-size:16px;
+opacity:0.85;
+margin:0;
+}
+
+/* Section boxes */
+
+.section-box{
+background:white;
+padding:28px 32px;
+border-radius:6px;
+box-shadow:0 1px 5px rgba(0,0,0,.1);
+margin-bottom:24px;
+}
+
+.section-box h2{
+font-size:20px;
+margin-top:0;
+border-left:4px solid #333;
+padding-left:12px;
+}
+
+.section-box p{
+margin-top:0;
+}
+
+/* Questions list */
+
+.questions-list{
+padding-left:0;
+list-style:none;
+}
+
+.questions-list li{
+background:#f0f4ff;
+border-left:4px solid #333;
+padding:12px 16px;
+margin-bottom:12px;
+border-radius:0 4px 4px 0;
+}
+
+/* Footer */
+
+footer{
+background:#333;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+
+/* Dark Mode */
+
+.dark-mode{
+background:#121212;
+color:white;
+}
+
+.dark-mode nav{
+background:black;
+}
+
+.dark-mode .hero{
+background:#1a1a1a;
+}
+
+.dark-mode .section-box{
+background:#1e1e1e;
+color:white;
+}
+
+.dark-mode .section-box h2{
+border-left-color:white;
+}
+
+.dark-mode .questions-list li{
+background:#2a2a2a;
+border-left-color:white;
+color:white;
+}
+
+.dark-mode .darkmode-btn{
+background:#444;
+color:white;
+}
+
+.dark-mode .nav-link.active{
+background:white;
+color:#111;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="#main" class="skip-link">Skip to Main Content</a>
+
+<nav>
+
+<div class="container" style="display:flex;align-items:center;gap:20px;width:100%;max-width:100%;">
+
+<img src="Cardinal-photo.png" alt="Red cardinal logo" title="Red cardinal logo representing the site branding" class="logo">
+
+<span class="site-name">Christopher Andrew Kostick</span>
+
+<a href="index.html" class="nav-link">Home</a>
+
+<a href="accessibility.html" class="nav-link active">Accessibility Page</a>
+
+<div class="access-tip">
+Dark Mode = Alt + A
+</div>
+
+<button class="darkmode-btn" onclick="toggleDarkMode()">
+Toggle Dark Mode
+</button>
+
+</div>
+
+</nav>
+
+<div class="hero">
+<div class="container">
+<h1>Accessibility Should Be Built In, Not Added Later as an "Oops I Forgot" Kinda Thing</h1>
+<p>Accessibility Position Statement &mdash; Christopher Andrew Kostick</p>
+</div>
+</div>
+
+<div id="main" class="container" style="margin-top:30px;">
+
+<section class="section-box">
+
+<h2>1. Central Position</h2>
+
+<p>
+Accessibility is one of the most overlooked aspects of technology and design today. Whether it is a website, an application, or a physical workspace, it is often treated as something extra rather than something essential. Teams move quickly, deadlines pile up, and accessibility gets pushed aside or forgotten completely. Because of this, many systems end up excluding people without anyone really noticing.
+</p>
+
+<p>
+Accessibility should be a required part of everything we build from the very beginning, not something added later if there is time. It is not just a bonus feature or a legal requirement; it is a fundamental part of creating something that actually works for everyone.
+</p>
+
+</section>
+
+<section class="section-box">
+
+<h2>2. Development of Ideas</h2>
+
+<p>
+My perspective on this comes from real experience, not just theory. During my internship at Ricoh, I saw how technology was set up and used in a professional environment. What stood out to me was how little attention was given to users who might interact with systems differently. Whether it was someone with a visual impairment, hearing difficulty, or limited mobility, those possibilities were rarely considered during setup or design. The assumption was that the "average user" would be using the system in a standard way, and that mindset left a lot of people out without anyone directly addressing it.
+</p>
+
+<p>
+I have continued to see the same pattern in my current role at Conduent. Decisions made early in development have a huge impact on who can and cannot effectively use a system. When accessibility is not included from the start, fixing it later becomes difficult, expensive, and sometimes unrealistic depending on how the system was built. In many cases, it simply never gets fixed. These experiences showed me that when accessibility is treated as optional early on, it often ends up being ignored entirely, which is why it needs to be built in from the beginning.
+</p>
+
+<p>
+On my own portfolio website, I made accessibility a priority during the initial build. Features like dark mode, keyboard navigation, audio captions, and written transcripts were all included intentionally. I wanted to show that these features are not complicated or expensive to implement when they are planned ahead of time. They just require awareness and effort early in the process. This reinforces my position that accessibility is not difficult; it is just often overlooked.
+</p>
+
+</section>
+
+<section class="section-box">
+
+<h2>3. Organization and Structure</h2>
+
+<p>
+The page will begin with an introduction that explains what accessibility is and why it is often overlooked in technology and design. From there, it will move into my personal experiences at Ricoh and Conduent to show how this issue appears in real-world professional settings rather than just in theory. After establishing that foundation, the page will expand into the broader impact of ignoring accessibility, including who is affected and how it limits their ability to participate fully.
+</p>
+
+<p>
+This section will help shift the focus from individual experiences to a larger, more systemic issue. The final section will highlight my portfolio website as a practical example of how accessibility can be successfully included from the start. Overall, the structure moves from personal experience to a wider argument, and then to a real solution. I am still working on making the transitions between these sections feel smoother, especially when moving from personal examples into the broader points.
+</p>
+
+</section>
+
+<section class="section-box">
+
+<h2>4. Accessibility of the Draft</h2>
+
+<p>
+All images included on my portfolio website have descriptive alt text and title attributes that explain both what is shown and why it is relevant. The two audio examples, one representing normal hearing and one simulating muffled hearing, both include written transcripts directly on the page so users can access the content without relying on audio. There is also a text-to-speech option available so users can listen to the transcript if they prefer.
+</p>
+
+<p>
+Since this draft is submitted in text format, additional captions or transcripts are not necessary here, but all multimedia elements connected to the project have been made accessible based on the guidelines covered in class.
+</p>
+
+</section>
+
+<section class="section-box">
+
+<h2>5. Questions for the Writer</h2>
+
+<ul class="questions-list">
+
+<li>Does my central position feel strong and direct enough in the introduction, or should I make it more concise so it stands out immediately?</li>
+
+<li>Do the connections between my experiences and the broader argument about accessibility feel clear, or should I add more explanation to better link them together?</li>
+
+<li>Would adding a specific example of how a lack of accessibility affects a real user make the argument more impactful?</li>
+
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+
+Accessibility Demonstration Website
+
+</footer>
+
+<script>
+
+function toggleDarkMode(){
+document.body.classList.toggle("dark-mode");
+}
+
+document.addEventListener("keydown", function(event){
+if(event.altKey && event.key.toLowerCase() === "a"){
+toggleDarkMode();
+}
+});
+
+</script>
+
+</body>
+
+</html>
